@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catchub | Task 2 - No Divs</title>
+    <link rel="icon" href="./Catchhub_/Catchhub/favicon.jpg">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            background: linear-gradient(#dcdcdc 0%, #ffffff 22%, #f4f4f4 100%);
+            color: #333;
+        }
+
+        /* Hero & Section layouts */
+        .hero,
+        .section {
+            min-height: 850px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 40px 8%;
+            gap: 60px;
+            text-align: center;
+        }
+
+        /* text container replaced with header */
+        .hero header {
+            width: 760px;
+            max-width: 50%;
+            text-align: center;
+        }
+
+        .logo {
+            width: 330px;
+            max-width: 100%;
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-size: 24px;
+            letter-spacing: 8px;
+            white-space: nowrap;
+            margin: 0 0 12px;
+            color: #222;
+        }
+
+        h2 {
+            font-size: 34px;
+            letter-spacing: 12px;
+            margin: 0 0 28px;
+            color: #222;
+        }
+
+        p {
+            margin: 0;
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.28;
+            color: #777;
+            text-align: center;
+        }
+
+        .hero p {
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 1.25;
+            color: #555;
+        }
+
+        /* button group using ul */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-top: 90px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .button-group li {
+            display: inline-block;
+        }
+
+        .button-group img {
+            width: 250px;
+            height: auto;
+        }
+
+        .screens {
+            max-width: 45%;
+            height: auto;
+        }
+
+        /* content replaced with article */
+        article.content {
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .reverse {
+            min-height: 760px;
+        }
+
+        .reverse article.content {
+            transform: translateY(-45px);
+        }
+
+        .reverse .screens {
+            max-width: 43%;
+            transform: translateY(-65px);
+        }
+
+        .vectors {
+            width: 760px;
+            max-width: 120%;
+            height: auto;
+            opacity: 1;
+            display: block;
+            margin: 0 auto 70px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        footer p {
+            font-size: 22px;
+            line-height: 1.4;
+        }
+
+        footer .footer-link {
+            color: #2d9cdb;
+            cursor: pointer;
+        }
+
+        .footer-logo {
+            width: 80px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero,
+            .section,
+            .section.reverse {
+                flex-direction: column;
+                min-height: auto;
+                padding: 50px 24px;
+                gap: 35px;
+            }
+
+            .hero header {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .reverse article.content,
+            .reverse .screens {
+                transform: none;
+            }
+
+            .screens,
+            .reverse .screens {
+                max-width: 90%;
+            }
+
+            .logo {
+                width: 260px;
+                margin-bottom: 25px;
+            }
+
+            h1 {
+                white-space: normal;
+                font-size: 18px;
+                letter-spacing: 5px;
+                line-height: 1.6;
+            }
+
+            h2 {
+                font-size: 20px;
+                letter-spacing: 6px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 1.35;
+            }
+
+            .hero p {
+                font-size: 22px;
+                line-height: 1.35;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .button-group {
+                margin-top: 35px;
+                gap: 16px;
+            }
+
+            .button-group img {
+                width: 130px;
+            }
+
+            .vectors {
+                width: 360px;
+                max-width: 90%;
+                margin-bottom: 35px;
+            }
+
+            footer {
+                padding: 50px 20px;
+            }
+
+            footer p {
+                font-size: 18px;
+            }
+
+            .footer-logo {
+                width: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section - No divs -->
+    <section class="hero">
+        <header>
+            <img src="./Catchhub_/Catchhub/logo.png" class="logo" alt="Catchub Logo">
+            <h1>WATCH. COMMUNICATE. CREATE.</h1>
+            <p>Everything you need to Socialise</p>
+            <ul class="button-group">
+                <li><img src="./Catchhub_/Catchhub/play_store.png" alt="Play Store"></li>
+                <li><img src="./Catchhub_/Catchhub/app_store.png" alt="App Store"></li>
+            </ul>
+        </header>
+        <img src="./Catchhub_/Catchhub/top_screens.png" alt="App Screens" class="screens">
+    </section>
+
+    <!-- CHANNELS Section -->
+    <section class="section">
+        <img src="./Catchhub_/Catchhub/sec_screens.png" alt="all screens" class="screens">
+        <article class="content">
+            <h2>CHANNELS</h2>
+            <p>Enjoy the videos and music you love<br>Create your own Business<br>or entertainment channel.</p>
+        </article>
+    </section>
+
+    <!-- MESSAGES Section (reverse) -->
+    <section class="section reverse">
+        <article class="content">
+            <h2>MESSAGES</h2>
+            <p>Communicate seamlessly.<br>Create your own professional<br>or social group chat.</p>
+        </article>
+        <img src="./Catchhub_/Catchhub/thhh_screens.png" alt="Message Screens" class="screens">
+    </section>
+
+    <!-- IN FUTURE Section -->
+    <section class="section">
+        <img src="./Catchhub_/Catchhub/for_screens.png" alt="Future Screens" class="screens">
+        <article class="content">
+            <img src="./Catchhub_/Catchhub/vectors.png" alt="Feature icons" class="vectors">
+            <h2>IN FUTURE</h2>
+            <p>Communicate seamlessly.<br>Create your own professional<br>or social group chat.</p>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>For Download Click Here:</p>
+        <ul class="button-group">
+            <li><img src="./Catchhub_/Catchhub/app_store.png" alt="App Store"></li>
+            <li><img src="./Catchhub_/Catchhub/play_store.png" alt="Play Store"></li>
+        </ul>
+        <p>Any Questions? Feel Free to <span class="footer-link">CONTACT US</span></p>
+        <img src="./Catchhub_/Catchhub/peratude.png" class="footer-logo" alt="Preatude Logo">
+    </footer>
+
+</body>
+</html>
